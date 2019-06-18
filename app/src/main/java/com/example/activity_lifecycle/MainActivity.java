@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public  void  launchSecondActivity()
+    public  void  launchSecondActivity(View view)
     {
-       Log.d(LOG_TAG,"Button_clicked");
+        Log.d(LOG_TAG,"Button_clicked");
         Intent intent =new Intent(this,SecondActivity.class);
         String message = send_message.getText().toString();
         intent.putExtra(EXTRA_MESSAGE,message);
@@ -114,4 +114,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.d(LOG_TAG, "onDestroy");
     }
+
+
 }
